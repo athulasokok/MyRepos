@@ -1,0 +1,39 @@
+import math
+
+def calculator():
+    while True:
+        operation = input("Enter an operation (+, -, *, /, **, sqrt, sin, cos, tan, log, ln): ")
+        if operation == 'q':
+            break
+        elif operation in ['+', '-', '*', '/', '**']:
+            num1 = float(input("Enter the first number: "))
+            num2 = float(input("Enter the second number: "))
+            if operation == '+':
+                print(num1 + num2)
+            elif operation == '-':
+                print(num1 - num2)
+            elif operation == '*':
+                print(num1 * num2)
+            elif operation == '/':
+                print(num1 / num2)
+            elif operation == '**':
+                print(num1 ** num2)
+        elif operation in ['sqrt', 'sin', 'cos', 'tan', 'log', 'ln']:
+            num = float(input("Enter a number: "))
+            if operation == 'sqrt':
+                print(math.sqrt(num))
+            elif operation == 'sin':
+                print(math.sin(num))
+            elif operation == 'cos':
+                print(math.cos(num))
+            elif operation == 'tan':
+                print(math.tan(num))
+            elif operation == 'log':
+                print(math.log10(num))
+            elif operation == 'ln':
+                print(math.log(num))
+        else:
+            print("Invalid operation. Please enter a valid operation.")
+
+if __name__ == '__main__':
+    calculator()
